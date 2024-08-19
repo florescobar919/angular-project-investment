@@ -10,28 +10,15 @@ import { type InvestmentInputModel } from '../interfaces/investment-input.model'
   styleUrl: './user-input.component.css'
 })
 export class UserInputComponent {
-
-  //@Output() calculate = new EventEmitter<InvestmentInputModel>();
+  
   calculate = output<InvestmentInputModel>();
 
-  /*txtInitialInvestment = '0';
-  txtAnnualInvestment = '0';
-  txtExpectedReturn = '0';
-  txtDuration = '0';*/
   txtInitialInvestment = signal('0');
   txtAnnualInvestment = signal('0');
   txtExpectedReturn = signal('0');
   txtDuration = signal('0');
 
   onSubmit() {
-    /*
-    this.calculate.emit({
-      initialInvestment: +this.txtInitialInvestment,
-      duration: +this.txtDuration,
-      expectedReturn: +this.txtExpectedReturn,
-      annualInvestment: +this.txtAnnualInvestment
-    })*/
-
     this.calculate.emit({
       initialInvestment: +this.txtInitialInvestment(),
       duration: +this.txtDuration(),

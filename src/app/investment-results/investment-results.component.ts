@@ -10,6 +10,5 @@ import { CurrencyPipe } from '@angular/common';
   styleUrl: './investment-results.component.css'
 })
 export class InvestmentResultsComponent {
-  //@Input() results? : InvestmentResultModel[]
   results = input<InvestmentResultModel[]>()
 }

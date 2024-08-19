@@ -13,8 +13,6 @@ import { InvestmentResultModel } from './interfaces/investment-result.model';
 })
 export class AppComponent {
 
-  //resultsData?: InvestmentResultModel[];
-
   resultsData = signal<InvestmentResultModel[] | undefined>(undefined);
 
   onCalculateInvestmentResults(data: InvestmentInputModel) {
@@ -39,8 +37,6 @@ export class AppComponent {
       });
     }
     
-    // this.resultsData = annualData;
-
     this.resultsData.set(annualData);
   }
 }
