@@ -30,8 +30,6 @@ export class InvestmentService {
     }
 
     this.resultsData = annualData;
-    
-    //this.resultsData.set(annualData);
   }
 
 }
